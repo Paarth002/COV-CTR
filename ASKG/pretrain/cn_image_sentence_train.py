@@ -186,7 +186,7 @@ def images_train():
         # compute output
         output_global, fm_global, pool_global = cnn_model(imgs)
 
-        patchs_var = Attention_gen_patchs(input, fm_global)
+        patchs_var = Attention_gen_patchs(imgs, fm_global)
         # patchs_var = Attention_gen_patchs(imgs, fm_global)
 
         output_local, _, pool_local = aux_model(patchs_var)
