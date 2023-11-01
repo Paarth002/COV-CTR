@@ -1,0 +1,455 @@
+cn_img_sen Namespace(data_dir='D:\\BTP2\\COV-CTR-master\\COV-CTR-master\\Datasets\\COV-CTR_with_English_reports', cnn_weight=None, caption_weight='', mGPUs=False, att_size=7, rnn_size=512, num_layers=2, rnn_type='lstm', input_encoding_size=512, topic_size=512, att_hid_size=512, fc_feat_size=2048, att_feat_size=2048, seq_sent_length=10, seq_word_length=20, n_ann=49, top_n_keys=10, dataset='coco', max_epochs=15, train_batch_size=16, eval_batch_size=16, grad_clip=5.0, drop_prob_lm=0.5, finetune_cnn_after=-1, beam_size=1, threshold=0.5, optim='adam', learning_rate=5e-05, learning_rate_decay_start=0, learning_rate_decay_every=3, learning_rate_decay_rate=0.8, optim_alpha=0.9, optim_beta=0.999, optim_epsilon=1e-08, weight_decay=0, cnn_optim='adam', cnn_learning_rate=1e-05, cnn_weight_decay=0, cnn_optim_alpha=0.8, cnn_optim_beta=0.999, scheduled_sampling_start=-1, scheduled_sampling_increase_every=5, scheduled_sampling_increase_prob=0.05, scheduled_sampling_max_prob=0.25, val_images_use=3200, save_checkpoint_every=2500, checkpoint_path='D:\\BTP2\\COV-CTR-master\\COV-CTR-master\\reports-results\\log_cn_image_precise_encoder', language_eval=1, losses_log_every=25, load_best_score=0, cbs=False, cbs_tag_size=3, cbs_mode='all', val_every_epoch=1, encoder_path='D:\\BTP2\\COV-CTR-master\\COV-CTR-master\\reports-results\\log_cn_encoder', decoder_path='save', id='', train_only=0, model_dir='./chexnet_models', shot='1st', log_step=1, ckpt_path='', num_medterm=229, num_disease=14, num_termclass=229, pooling='mean', attention_unit=350, attention_hops=1, d_model=512, factor=1, warmup=4000, report_weight='', temperature=1.0, top_k=0, sample=False)
+fusion model output options 229
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+[""]
+0
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+[""]
+[""]
+[""]
+[""]
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
+type <class 'torch.Tensor'> <class 'torch.Tensor'> <class 'torch.Tensor'>
+output shape torch.Size([16, 229]) torch.Size([16, 1024, 7, 7]) torch.Size([16, 1024])
+img shape 16 3 224 224
+output_fusion torch.Size([16, 50176]) torch.Size([16, 1024]) torch.Size([16, 1024])
+att torch.Size([16, 50176])
+batch and img 16 49 1024
