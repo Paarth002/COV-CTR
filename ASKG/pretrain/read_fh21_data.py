@@ -13,15 +13,14 @@ import sys
 
 class Fh21Dataset(Dataset):
     def __init__(self, opt):
-        
         # TODO
-        self.data_dir = 'C:\\Users\\PARTH\\Downloads\\COV-CTR-master\\COV-CTR-master\\ASKG\\report\\processed_fh21_precise_tag'
+        self.data_dir = "/kaggle/working/COV-CTR/ASKG/report/processed_fh21_precise_tag"
         self.num_medterm = opt.num_medterm
 
-        with open(os.path.join(self.data_dir, 'fh21.pkl'), 'rb') as f:
+        with open(os.path.join(self.data_dir, "fh21.pkl"), "rb") as f:
             self.data = pkl.load(f)
 
-        with open(os.path.join(self.data_dir, 'word2idw.pkl'), 'rb') as f:
+        with open(os.path.join(self.data_dir, "word2idw.pkl"), "rb") as f:
             self.word2idw = pkl.load(f)
 
         self.idw2word = {v: k for k, v in self.word2idw.items()}
@@ -53,9 +52,8 @@ class Fh21Dataset(Dataset):
 
 
 def get_loader2(opt):
-
     dataset = Fh21Dataset(opt)
-    loader = DataLoader(dataset=dataset, batch_size=opt.train_batch_size,
-                            shuffle=True, num_workers=16)
+    loader = DataLoader(
+        dataset=dataset, batch_size=opt.train_batch_size, shuffle=True, num_workers=16
+    )
     return dataset, loader
-

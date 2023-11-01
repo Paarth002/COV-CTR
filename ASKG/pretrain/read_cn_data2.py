@@ -18,15 +18,15 @@ class CHXrayDataSet2(Dataset):
 
         self.data_dir = opt.data_dir
         # TODO
-        self.pkl_dir = os.path.join('C:\\Users\\PARTH\\Downloads\\COV-CTR-master\\COV-CTR-master\\ASKG', 'report')
-        self.img_dir = os.path.join(self.data_dir, 'NLMCXR_png') ###change 1
+        self.pkl_dir = os.path.join("/kaggle/working/COV-CTR/ASKG", "report")
+        self.img_dir = os.path.join(self.data_dir, "NLMCXR_png")  ###change 1
         # self.img_dir = os.path.join(self.data_dir, 'images-224') ###change 1
         # print(1, self.img_dir, end="\n\n\n")
         # self.img_dir = self.data_dir
 
         self.num_medterm = opt.num_medterm
 
-        with open(os.path.join(self.pkl_dir, 'align2.' + split + '.pkl'), 'rb') as f:
+        with open(os.path.join(self.pkl_dir, "align2." + split + ".pkl"), "rb") as f:
             self.findings = pkl.load(f)
             # print('new1', self.findings[0])
             self.findings_labels = pkl.load(f)
@@ -38,11 +38,11 @@ class CHXrayDataSet2(Dataset):
 
         f.close()
 
-        with open(os.path.join(self.pkl_dir, 'word2idw.pkl'), 'rb') as f:
+        with open(os.path.join(self.pkl_dir, "word2idw.pkl"), "rb") as f:
             self.word2idw = pkl.load(f)
         f.close()
 
-        with open(os.path.join(self.pkl_dir, 'idw2word.pkl'), 'rb') as f:
+        with open(os.path.join(self.pkl_dir, "idw2word.pkl"), "rb") as f:
             self.idw2word = pkl.load(f)
         f.close()
 
@@ -56,11 +56,11 @@ class CHXrayDataSet2(Dataset):
         # print(2, image_id)
         # print("#\n#\n#\n")
         image_name = os.path.join(self.img_dir, image_id)
-        img = Image.open(image_name).convert('RGB')
+        img = Image.open(image_name).convert("RGB")
         if self.transform is not None:
             img = self.transform(img)
 
-        #print(img.size(), image_id)
+        # print(img.size(), image_id)
         medterm_labels = np.zeros(self.num_medterm)
         medterms = self.medterms[ix]
         for medterm in medterms:
@@ -76,38 +76,55 @@ class CHXrayDataSet2(Dataset):
         findings = torch.from_numpy(findings).long()
         findings_labels = torch.from_numpy(findings_labels).long()
 
-
-        return ix, image_id, img, findings, findings_labels, torch.FloatTensor(medterm_labels)
+        return (
+            ix,
+            image_id,
+            img,
+            findings,
+            findings_labels,
+            torch.FloatTensor(medterm_labels),
+        )
 
     def __len__(self):
         return len(self.ids)
 
 
 def get_loader_cn(opt, split):
+    normalize = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 
-    normalize = transforms.Normalize([0.485, 0.456, 0.406],
-                                     [0.229, 0.224, 0.225])
+    dataset = CHXrayDataSet2(
+        opt,
+        split=split,
+        transform=transforms.Compose(
+            [transforms.Resize((224, 224)), transforms.ToTensor(), normalize]
+        ),
+    )
 
-    dataset = CHXrayDataSet2(opt, split=split,
-                             transform=transforms.Compose([
-                                 transforms.Resize((224, 224)),
-                                 transforms.ToTensor(),
-                                 normalize
-                             ]))
-    
     # print('dataset:', dataset)
-    if split == 'train':
-        loader = DataLoader(dataset=dataset, batch_size=opt.train_batch_size,
-                            shuffle=True, num_workers=16)
-    elif split == 'val':
-        loader = DataLoader(dataset=dataset, batch_size=opt.eval_batch_size,
-                            shuffle=True, num_workers=16)
-    elif split == 'test':
-        loader = DataLoader(dataset=dataset, batch_size=opt.eval_batch_size,
-                            shuffle=False, num_workers=16)
+    if split == "train":
+        loader = DataLoader(
+            dataset=dataset,
+            batch_size=opt.train_batch_size,
+            shuffle=True,
+            num_workers=16,
+        )
+    elif split == "val":
+        loader = DataLoader(
+            dataset=dataset,
+            batch_size=opt.eval_batch_size,
+            shuffle=True,
+            num_workers=16,
+        )
+    elif split == "test":
+        loader = DataLoader(
+            dataset=dataset,
+            batch_size=opt.eval_batch_size,
+            shuffle=False,
+            num_workers=16,
+        )
     else:
-        raise Exception('DataLoader split must be train or val.')
-    
+        raise Exception("DataLoader split must be train or val.")
+
     # for x in dataset:
     #     print('a', x)
     #     break
@@ -115,4 +132,3 @@ def get_loader_cn(opt, split):
     #     print('b', x)
     #     break
     return dataset, loader
-
