@@ -197,6 +197,10 @@ def images_train():
             att_feats=output_fusion, input_ids=input_ids, input_type="img"
         )
 
+        print("findings_outputs", findings_outputs.size())
+        print("med_porbs", med_porbs.size())
+        print("medterm_labels", medterm_labels.size())
+        
         med_loss = med_crit(med_porbs, medterm_labels)
         caption_loss = outputs_crit(
             findings_outputs.view(-1, findings_outputs.size(-1)), lm_labels.view(-1)
